@@ -1,0 +1,55 @@
+html
+{
+    min-height: 100vh;
+}
+
+body
+{
+    margin: 0px;
+}
+
+#grid-container
+{
+    --side-length: min(90vw, 80vh);
+    width: var(--side-length);
+    margin: auto;
+    height: var(--side-length);
+    font-size: 0px;
+    border: .1rem solid black;
+    box-shadow: none;
+    margin-top: 3vh;
+}
+
+#tool-bar
+{
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.grid-square
+{
+    --percentage: calc(100%/var(--side));
+    display: inline-block;
+    width: var(--percentage);
+    height: var(--percentage);
+    background-color: white;
+}
+
+.outlined
+{
+    --clear: #00000000;
+    --outline-color: #000000;
+    --outline: var(--outline-color);
+    transition: box-shadow .5s, background-color .2s;
+    box-shadow: inset 0px 0px 0px 1px var(--outline);
+}
+
+
+input
+{
+    margin: 5%;
+}
